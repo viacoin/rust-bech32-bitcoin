@@ -18,9 +18,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-//! Encoding and decoding Bech32 Bitcoin Segwit Addresses
+//! Encoding and decoding Bech32 Viacoin Segwit Addresses
 //!
-//! Encoding and decoding for Bitcoin Segregated Witness addresses. Bech32 is an
+//! Encoding and decoding for Viacoin Segregated Witness addresses. Bech32 is an
 //! encoding scheme described in [BIP-0173](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki),
 //! and segregated witness addresses encoded by Bech32 simply combine a coin-specific
 //! human-readable part with the data of the witness program as the Bech32 data
@@ -29,8 +29,8 @@
 //! # Examples
 //!
 //! ```rust
-//! use bitcoin_bech32::{WitnessProgram, u5};
-//! use bitcoin_bech32::constants::Network;
+//! use viacoin_bech32::{WitnessProgram, u5};
+//! use viacoin_bech32::constants::Network;
 //!
 //! let witness_program = WitnessProgram::new(
 //!     u5::try_from_u8(0).unwrap(),
