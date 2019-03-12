@@ -15,12 +15,12 @@ let witness_program = WitnessProgram::new(
         0x21, 0xb2, 0xa1, 0x87, 0x90, 0x5e, 0x52, 0x66,
         0x36, 0x2b, 0x99, 0xd5, 0xe9, 0x1c, 0x6c, 0xe2,
         0x4d, 0x16, 0x5d, 0xab, 0x93, 0xe8, 0x64, 0x33],
-    Network::Testnet,
+    Network::Viacoin,
 ).unwrap();
 
 let address = witness_program.to_address();
 assert_eq!(address,
-           "via1qqqqqp399et2xygdj5xreqhjjvcmzhxw4aywxecjdzew6hylgvsesrxh6hy".to_string());
+           "via1qqqqqp399et2xygdj5xreqhjjvcmzhxw4aywxecjdzew6hylgvseslnpyya".to_string());
 
 let decoded = WitnessProgram::from_address(&address).unwrap();
 assert_eq!(decoded, witness_program);
