@@ -40,6 +40,10 @@ pub enum Network {
     Vertcoin,
     /// Vertcoin testnet
     VertcoinTestnet,
+    /// Viacoin mainnet
+    Viacoin,
+    /// Viacoin testnet
+    ViacoinTestnet,
 }
 
 /// Returns the Human-readable part for the given network
@@ -51,6 +55,8 @@ pub fn hrp(network: &Network) -> String {
         Network::LitecoinTestnet => "tltc".to_string(),
         Network::Vertcoin => "vtc".to_string(),
         Network::VertcoinTestnet => "tvtc".to_string(),
+        Network::Viacoin => "via".to_string(),
+        Network::ViacoinTestnet => "tvia".to_string(),
         Network::Regtest => "bcrt".to_string(),
     }
 }
@@ -64,6 +70,8 @@ pub fn classify(hrp: &str) -> Option<Network> {
         "tltc" => Some(Network::LitecoinTestnet),
         "vtc" => Some(Network::Vertcoin),
         "tvtc" => Some(Network::VertcoinTestnet),
+        "via" => Some(Network::Viacoin),
+        "tvia" => Some(Network::ViacoinTestnet),
         "bcrt" => Some(Network::Regtest),
         _ => None
     }
